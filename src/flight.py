@@ -58,14 +58,14 @@ if success:
     working = bebop.flip(direction="left")
     print("mambo flip result %s" % working)
     bebop.smart_sleep(5)
-    bebop.safe_land(10)
-
+    # bebop.safe_land(10)
+    """
     # TODO: if first arg is true, do an action, else do not
     bebop.safe_takeoff(10)
     if sys.argv[1] == True:
         # TODO: do an action
         pass
-
+    """
     # land the robot
     bebop.safe_land(10)
 
