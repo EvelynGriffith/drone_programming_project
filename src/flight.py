@@ -26,34 +26,43 @@ if success:
 
     # TODO: take off, fly in a small square, land
     bebop.safe_takeoff(10)
-    # TODO: edit to be square
+    # fly in a square
     bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=0, yaw=20, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=0, yaw=-20, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.smart_sleep(2)
+
     # TODO: do a flip!
     print("flip right")
     print("flying state is %s" % bebop.sensors.flying_state)
-    success = bebop.flip(direction="right")
-    print("mambo flip result %s" % success)
+    working = bebop.flip(direction="right")
+    print("mambo flip result %s" % working)
     bebop.smart_sleep(5)
     bebop.safe_land(10)
 
     # TODO: take off, fly in a small square, land
     bebop.safe_takeoff(10)
-    # TODO: edit to be square
+    # fly in a square
     bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=0, yaw=20, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=0, yaw=-20, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.smart_sleep(2)
+
     # TODO: do a flip!
     print("flip left")
     print("flying state is %s" % bebop.sensors.flying_state)
-    success = bebop.flip(direction="left")
-    print("mambo flip result %s" % success)
+    working = bebop.flip(direction="left")
+    print("mambo flip result %s" % working)
     bebop.smart_sleep(5)
-    # bebop.safe_land(10)
+
     # TODO: if first arg is true, do an action, else do not
+    if sys.argv[1] == True:
+        # TODO: do an action
+        pass
 
     # land the robot
     bebop.safe_land(10)
