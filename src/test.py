@@ -11,6 +11,7 @@ if success:
     bebop.start_video_stream()
 
     print("sleeping")
+
     bebop.smart_sleep(2)
 
     bebop.ask_for_state_update()
@@ -25,9 +26,14 @@ if success:
     # bebop.set_hull_protection(1)
 
     print("Flying direct: Slow move for indoors")
+    bebop.safe_takeoff(10)
+    # fly forward and backwards
     bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-
-    bebop.smart_sleep(5)
+    # bebop.fly_direct(roll=20, pitch=0, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
+    # bebop.fly_direct(roll=-20, pitch=0, yaw=0, vertical_movement=0, duration=2)
+    # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.smart_sleep(2)
 
     bebop.safe_land(10)
 

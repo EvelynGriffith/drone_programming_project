@@ -26,15 +26,12 @@ if success:
 
     # TODO: take off, fly in a small square, land
     bebop.safe_takeoff(10)
-    # fly in a square
+    # fly forwards and backwards
     bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=0, yaw=20, vertical_movement=0, duration=2)
     bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=0, yaw=-20, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
     bebop.smart_sleep(2)
 
-    # TODO: do a flip!
+    # do a flip!
     print("flip right")
     print("flying state is %s" % bebop.sensors.flying_state)
     working = bebop.flip(direction="right")
@@ -42,30 +39,29 @@ if success:
     bebop.smart_sleep(5)
     bebop.safe_land(10)
 
-    # TODO: take off, fly in a small square, land
+    # take off, fly in a small square, land
     bebop.safe_takeoff(10)
-    # fly in a square
+    # fly forwards and backwards
     bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=0, yaw=20, vertical_movement=0, duration=2)
     bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=0, yaw=-20, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
     bebop.smart_sleep(2)
 
-    # TODO: do a flip!
+    # do a flip!
     print("flip left")
     print("flying state is %s" % bebop.sensors.flying_state)
     working = bebop.flip(direction="left")
     print("mambo flip result %s" % working)
     bebop.smart_sleep(5)
-    # bebop.safe_land(10)
-    """
-    # TODO: if first arg is true, do an action, else do not
+    bebop.safe_land(10)
+
+    # if first arg is true, do an action, else do not
     bebop.safe_takeoff(10)
     if sys.argv[1] == True:
-        # TODO: do an action
-        pass
-    """
+        # do an action
+        bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+        bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
+        bebop.smart_sleep(2)
+
     # land the robot
     bebop.safe_land(10)
 
