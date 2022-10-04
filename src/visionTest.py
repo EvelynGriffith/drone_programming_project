@@ -20,11 +20,13 @@ class UserVision:
     def save_pictures(self, args):
         # print("saving picture")
         img = self.vision.get_latest_valid_picture()
+        print("Saving picture!")
 
         if img is not None:
             filename = "test_image_%06d.png" % self.index
             # cv2.imwrite(filename, img)
             self.index += 1
+            return filename
 
 
 # make my bebop object
@@ -62,4 +64,4 @@ if success:
     # disconnect nicely so we don't need a reboot
     bebop.disconnect()
 else:
-    print("Error connecting to bebop.  Retry")
+    print("Error connecting to bebop. Retry")
