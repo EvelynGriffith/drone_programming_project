@@ -28,9 +28,9 @@ if success:
     print("Flying direct: Slow move for indoors")
     bebop.safe_takeoff(10)
     # fly forward and backwards
-    bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=20, pitch=0, yaw=0, vertical_movement=0, duration=2)
     # bebop.fly_direct(roll=20, pitch=0, yaw=0, vertical_movement=0, duration=2)
-    bebop.fly_direct(roll=0, pitch=-20, yaw=0, vertical_movement=0, duration=2)
+    bebop.fly_direct(roll=-60, pitch=0, yaw=0, vertical_movement=0, duration=2)
     # bebop.fly_direct(roll=-20, pitch=0, yaw=0, vertical_movement=0, duration=2)
     # bebop.fly_direct(roll=0, pitch=20, yaw=0, vertical_movement=0, duration=2)
     bebop.smart_sleep(2)
