@@ -72,7 +72,7 @@ The implementation task for this project is to develop a behavior-based navigati
 - Take off, fly some distance in a pre-defined pattern, land. Do this at least twice.
 - Use at least one loop and at least one conditional statement. User-defined input is welcome.
 - Navigation must last at least one minute.
-- Your drone should take at least five photos during each leg of the flight (from take off to landing) and record the video of its flight in its entirety.
+- Your drone should take at least five photos during each leg of the flight (from take off to landing) or record the video of its flight in its entirety.
 - The program should collect the sensor data each time a sensor is updated and output it into a file.
 
 ## Project Walkthrough
