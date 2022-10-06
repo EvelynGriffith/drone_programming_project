@@ -1,4 +1,4 @@
-# Report by Add Team Member Names
+# Report by Katie, Evelyn, and Pallas
 
 ## Participation in Races
 
